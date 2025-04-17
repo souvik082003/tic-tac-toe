@@ -1,0 +1,76 @@
+body {
+  font-family: 'Press Start 2P', cursive;
+  background: radial-gradient(circle at top left, #1e1e2f, #000);
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  background-image: url('https://i.imgflip.com/5vdk6x.jpg');
+  background-size: cover;
+  background-position: center;
+  animation: pulseBackground 10s infinite alternate;
+}
+
+@keyframes pulseBackground {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: #00ffe7;
+  text-shadow: 2px 2px #ff00c8;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  margin: 2rem auto;
+  justify-content: center;
+}
+
+.cell {
+  background: #111;
+  border: 4px double #00ffe7;
+  box-shadow: 0 0 10px #ff00c8;
+  font-size: 2rem;
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.cell:hover {
+  transform: scale(1.2);
+  background: #2a2a2a;
+  box-shadow: 0 0 20px #00ffe7;
+}
+
+#status {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  background: #00000088;
+  padding: 1rem;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+#reset {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  background-color: #ff00c8;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff00c8;
+}
+
+#reset:hover {
+  background-color: #ff009d;
+}
